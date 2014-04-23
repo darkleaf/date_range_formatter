@@ -1,0 +1,8 @@
+en:
+  date_range:
+    default:
+      separator: " - "
+      month: "%B"
+      year: "%Y"
+      same_months: "%{from_day}-%{until_day} %{month} %{year}"
+      same_years: "%{from_day} %{from_month} - %{until_day} %{until_month} %{year}"
