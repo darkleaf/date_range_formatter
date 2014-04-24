@@ -1,4 +1,4 @@
-# date_range_formatter
+# Date Range Formatter
 
 [![Build Status](https://travis-ci.org/darkleaf/date_range_formatter.svg?branch=master)](https://travis-ci.org/darkleaf/date_range_formatter)
 [![Gem Version](https://badge.fury.io/rb/date_range_formatter.svg)](http://badge.fury.io/rb/date_range_formatter)
