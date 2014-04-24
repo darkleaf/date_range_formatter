@@ -1,3 +1,4 @@
+require 'active_support/core_ext/string/conversions.rb'
 require 'active_support/i18n'
 
 I18n.load_path << "#{File.dirname(__FILE__)}/locale/en.yml"
@@ -6,7 +7,7 @@ module DateRangeFormatter
 
   class << self
     def format(date_beginning, date_ending, format = :default)
-      f = Formatter.new date_beginning, date_ending, format
+      f = Formatter.new date_beginning.to_date, date_ending.to_date, format
       f.to_s
     end
   end
