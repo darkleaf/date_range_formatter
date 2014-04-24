@@ -48,3 +48,9 @@ date_range_str = DateRangeFormatter.format(date_beginning, date_ending, 'short')
 ```
 
 That's all. Enjoy yout profit!
+
+## Other
+
+This idea was appeared by looking at the [article](https://coderwall.com/p/fkg-ng). Thanks to @mbillard.
+
+
