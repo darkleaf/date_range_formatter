@@ -51,6 +51,6 @@ That's all. Enjoy yout profit!
 
 ## Other
 
-This idea was appeared by looking at the [article](https://coderwall.com/p/fkg-ng). Thanks to @mbillard.
+This idea was appeared by looking at the [article](https://coderwall.com/p/fkg-ng). Thanks to [@mbillard](https://github.com/mbillard).
 
 
