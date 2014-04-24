@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/darkleaf/date_range_formatter.svg?branch=master)](https://travis-ci.org/darkleaf/date_range_formatter)
 [![Gem Version](https://badge.fury.io/rb/date_range_formatter.svg)](http://badge.fury.io/rb/date_range_formatter)
-[![Build Status](https://drone.io/github.com/dronov/date_range_formatter/status.png)](https://drone.io/github.com/dronov/date_range_formatter/latest)
+[![Build Status](https://drone.io/github.com/darkleaf/date_range_formatter/status.png)](https://drone.io/github.com/darkleaf/date_range_formatter/latest)
 
 This gem makes working with dates more pretty. It works well with Ruby application and most frameworks like  [Ruby on Rails](https://github.com/rails/rails "Ruby on Rails").
 
