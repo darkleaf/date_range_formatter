@@ -28,6 +28,7 @@ en:
       separator: " - " # added ' - ' symbol to the date ranges
       month: "%B"
       year: "%Y"
+      same_days: "%{day} %{month} %{year}"
       same_months: "%{from_day}-%{until_day} %{month} %{year}"
       same_years: "%{from_day} %{from_month} - %{until_day} %{until_month} %{year}"
 ```
