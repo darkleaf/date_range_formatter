@@ -35,8 +35,11 @@ en:
 After that you should call the module DateRangeFormatter with arguments wchich describes the range of dates and format to display. For example, we have date_beginning, date_ending and format by default:
 
 ```ruby
-DateRangeFormatter.format('2013-01-14', '2013-01-15')
+DateRangeFormatter.format('2013-01-14', '2013-02-15')
 #=> '14 January - 15 February 2013'
+
+DateRangeFormatter.format_range(['2013-02-20', '2013-01-14', '2013-01-15'])
+#=> '14 January - 20 February 2013'
 ```
 
 If you want to show dates by another format, you can call it:

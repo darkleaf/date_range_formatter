@@ -7,7 +7,16 @@ module DateRangeFormatter
 
   class << self
     def format(date_beginning, date_ending, format = :default)
-      f = Formatter.new date_beginning.to_date, date_ending.to_date, format
+      format_range [date_beginning, date_ending], format
+    end
+
+    def format_range(enumerable_range, format = :default)
+      return if enumerable_range.none?
+      sorted_range = enumerable_range.map(&:to_date).sort
+      date_beginning = sorted_range.first
+      date_ending = sorted_range.last
+
+      f = Formatter.new date_beginning, date_ending, format
       f.to_s
     end
   end
