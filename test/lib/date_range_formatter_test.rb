@@ -7,7 +7,7 @@ class DateRangeFormatterTest < TestHelper
   def test_same_days
     date_range_str = DateRangeFormatter.format('2013-01-14', '2013-01-14')
 
-    assert_equal '2013-01-14', date_range_str
+    assert_equal '14 January 2013', date_range_str
   end
 
   def test_same_months

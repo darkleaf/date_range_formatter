@@ -31,7 +31,7 @@ module DateRangeFormatter
     end
 
     def to_s
-      return I18n.l from_date, format: format if same_days?
+      return I18n.t 'same_days', same_days_data.merge(scope: ['date_range', format]) if same_days?
       return I18n.t 'same_months', same_months_data.merge(scope: ['date_range', format]) if same_months?
       return I18n.t 'same_years', same_years_data.merge(scope: ['date_range', format]) if same_years?
 
@@ -54,6 +54,14 @@ module DateRangeFormatter
     end
 
     private
+    def same_days_data
+      {
+          day: from_date.day,
+          month: formatted_month(from_date),
+          year: formatted_year(from_date),
+      }
+    end
+
     def same_months_data
       {
         from_day: from_date.day,
