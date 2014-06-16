@@ -33,5 +33,17 @@ class DateRangeFormatterTest < TestHelper
 
     assert_equal '14 January 2013 - 15 February 2014', date_range_str
   end
+
+  def test_same_hours_with_time_format
+    date_range_str = DateRangeFormatter.format('10:00 2013-01-14', '10:00 2013-01-14', :with_time)
+
+    assert_equal '14 January 2013, 10am', date_range_str
+  end
+
+  def test_same_days_with_time_format
+    date_range_str = DateRangeFormatter.format('10:00 2013-01-14', '20:00 2013-01-14', :with_time)
+
+    assert_equal '14 January 2013, 10am - 08pm', date_range_str
+  end
 end
 

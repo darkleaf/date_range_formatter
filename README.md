@@ -25,14 +25,25 @@ To show this dates in this format you need to describe the format of displaying 
 ```yaml
 en:
   date_range:
-    default: # it's the 'format'
-      separator: " - " # added ' - ' symbol to the date ranges
+    default:
       month: "%B"
       year: "%Y"
+      same_hours: "%{day} %{month} %{year}"
       same_days: "%{day} %{month} %{year}"
       same_months: "%{from_day}-%{until_day} %{month} %{year}"
       same_years: "%{from_day} %{from_month} - %{until_day} %{until_month} %{year}"
       different_components: "%{from_day} %{from_month} %{from_year} - %{until_day} %{until_month} %{until_year}"
+
+    with_time:
+      hour: "%I%P"
+      month: "%B"
+      year: "%Y"
+      same_hours: "%{day} %{month} %{year}, %{hour}"
+      same_days: "%{day} %{month} %{year}, %{from_hour} - %{until_hour}"
+      same_months: "%{from_day}-%{until_day} %{month} %{year}"
+      same_years: "%{from_day} %{from_month} - %{until_day} %{until_month} %{year}"
+      different_components: "%{from_day} %{from_month} %{from_year} - %{until_day} %{until_month} %{until_year}"
+
 ```
 
 After that you should call the module DateRangeFormatter with arguments wchich describes the range of dates and format to display. For example, we have date_beginning, date_ending and format by default:
@@ -51,6 +62,12 @@ If you want to show dates by another format, you can call it:
 date_beginning = Date.new(2013, 01, 14)
 date_ending = Date.new(2014, 02, 15)
 date_range_str = DateRangeFormatter.format(date_beginning, date_ending, 'short')
+```
+
+If you want to show hours, you can call it:
+```ruby
+DateRangeFormatter.format('10:00 2013-01-14', '20:00 2013-01-14', :with_time)
+#=> '14 January 2013, 10am - 08pm'
 ```
 
 That's all. Enjoy yout profit!
