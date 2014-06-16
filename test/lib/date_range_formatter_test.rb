@@ -31,7 +31,7 @@ class DateRangeFormatterTest < TestHelper
     date_ending = Date.new(2014, 02, 15)
     date_range_str = DateRangeFormatter.format(date_beginning, date_ending)
 
-    assert_equal '2013-01-14 - 2014-02-15', date_range_str
+    assert_equal '14 January 2013 - 15 February 2014', date_range_str
   end
 end
 

@@ -34,11 +34,7 @@ module DateRangeFormatter
       return I18n.t 'same_days', same_days_data.merge(scope: ['date_range', format]) if same_days?
       return I18n.t 'same_months', same_months_data.merge(scope: ['date_range', format]) if same_months?
       return I18n.t 'same_years', same_years_data.merge(scope: ['date_range', format]) if same_years?
-
-      from_str = I18n.l from_date, format:  format
-      until_str = I18n.l until_date, format: format
-      separator = I18n.t "separator", scope: ["date_range", format]
-      [from_str, separator, until_str].join
+      I18n.t 'different_components', different_components_data.merge(scope: ['date_range', format])
     end
 
     def same_days?
@@ -78,6 +74,17 @@ module DateRangeFormatter
         from_month: formatted_month(from_date),
         until_month: formatted_month(until_date),
         year: formatted_year(from_date),
+      }
+    end
+
+    def different_components_data
+      {
+        from_day: from_date.day,
+        until_day: until_date.day,
+        from_month: formatted_month(from_date),
+        until_month: formatted_month(until_date),
+        from_year: formatted_year(from_date),
+        until_year: formatted_year(until_date),
       }
     end
 

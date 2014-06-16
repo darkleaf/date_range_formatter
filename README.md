@@ -32,6 +32,7 @@ en:
       same_days: "%{day} %{month} %{year}"
       same_months: "%{from_day}-%{until_day} %{month} %{year}"
       same_years: "%{from_day} %{from_month} - %{until_day} %{until_month} %{year}"
+      different_components: "%{from_day} %{from_month} %{from_year} - %{until_day} %{until_month} %{until_year}"
 ```
 
 After that you should call the module DateRangeFormatter with arguments wchich describes the range of dates and format to display. For example, we have date_beginning, date_ending and format by default:
