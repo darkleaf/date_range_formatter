@@ -70,7 +70,7 @@ DateRangeFormatter.format('10:00 2013-01-14', '20:00 2013-01-14', :with_time)
 #=> '14 January 2013, 10am - 08pm'
 ```
 
-That's all. Enjoy yout profit!
+That's all. Enjoy your profit!
 
 ## Other
 
