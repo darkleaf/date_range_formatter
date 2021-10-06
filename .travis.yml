@@ -3,5 +3,3 @@ rvm:
   - 2.1.0
   - 2.7.0
   - 3.0.1
-env:
-  - CODECLIMATE_REPO_TOKEN=95b13d8f15b2fe39396c52ffb4fac3e97213505251ad2caff7fcfc7135521fcd
