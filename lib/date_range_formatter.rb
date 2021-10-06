@@ -31,11 +31,11 @@ module DateRangeFormatter
     end
 
     def to_s
-      return I18n.t 'same_hours', same_hours_data.merge(scope: ['date_range', format]) if same_hours?
-      return I18n.t 'same_days', same_days_data.merge(scope: ['date_range', format]) if same_days?
-      return I18n.t 'same_months', same_months_data.merge(scope: ['date_range', format]) if same_months?
-      return I18n.t 'same_years', same_years_data.merge(scope: ['date_range', format]) if same_years?
-      I18n.t 'different_components', different_components_data.merge(scope: ['date_range', format])
+      return I18n.t 'same_hours', **same_hours_data.merge(scope: ['date_range', format]) if same_hours?
+      return I18n.t 'same_days', **same_days_data.merge(scope: ['date_range', format]) if same_days?
+      return I18n.t 'same_months', **same_months_data.merge(scope: ['date_range', format]) if same_months?
+      return I18n.t 'same_years', **same_years_data.merge(scope: ['date_range', format]) if same_years?
+      I18n.t 'different_components', **different_components_data.merge(scope: ['date_range', format])
     end
 
     def same_hours?
